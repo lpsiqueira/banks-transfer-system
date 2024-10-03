@@ -1,18 +1,18 @@
-package lucas.banks_transfer_system.personnalKey;
+package lucas.banks_transfer_system.personalAccountInfo;
 
 import java.io.Serializable;
 
-public class PersonnalInfo implements Serializable {
+public class PersonalAccount implements Serializable {
 	private String name;
 	private String cpf;
 	private int bank;
 	private int agencia;
 	private int account;
 	
-	public PersonnalInfo() {
+	public PersonalAccount() {
 	}
 
-	public PersonnalInfo(String name, String cPF, int bank, int agencia, int account) {
+	public PersonalAccount(String name, String cPF, int bank, int agencia, int account) {
 		this.name = name;
 		this.cpf = cPF;
 		this.bank = bank;
@@ -40,7 +40,7 @@ public class PersonnalInfo implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		PersonnalInfo other = (PersonnalInfo) obj;
+		PersonalAccount other = (PersonalAccount) obj;
 		if (name == null) {
 			if (other.name != null)
 				return false;

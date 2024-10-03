@@ -1,17 +1,17 @@
-package lucas.banks_transfer_system.personnalKey;
+package lucas.banks_transfer_system.personalAccountInfo;
 
 import jakarta.persistence.Embeddable;
 import java.io.Serializable;
 
 @Embeddable
-public class PersonnalKey implements Serializable {
+public class PersonalKey implements Serializable {
 	private String type;
 	private String key;
 	
-	public PersonnalKey() {
+	public PersonalKey() {
 	}
 
-	public PersonnalKey(String type, String key) {
+	public PersonalKey(String type, String key) {
 		this.type = type;
 		this.key = key;
 	}
@@ -49,7 +49,7 @@ public class PersonnalKey implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		PersonnalKey other = (PersonnalKey) obj;
+		PersonalKey other = (PersonalKey) obj;
 		if (type == null) {
 			if (other.type != null)
 				return false;

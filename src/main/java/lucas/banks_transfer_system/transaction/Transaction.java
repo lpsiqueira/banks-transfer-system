@@ -5,7 +5,7 @@ import java.time.*;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lucas.banks_transfer_system.personnalKey.PersonnalInfo;
+import lucas.banks_transfer_system.personalAccountInfo.*;
 
 @Entity
 public class Transaction {
@@ -13,14 +13,14 @@ public class Transaction {
 	private UUIDJavaType id;
 	private LocalDateTime transactionTimeStamp;
 	private float value;
-	private PersonnalInfo payer; 
-	private PersonnalInfo payee;
+	private PersonalAccount payer; 
+	private PersonalAccount payee;
 
 	public Transaction() {
 	}
 
-	public Transaction(UUIDJavaType id, LocalDateTime transactionTimeStamp, float value, PersonnalInfo payer,
-			PersonnalInfo payee) {
+	public Transaction(UUIDJavaType id, LocalDateTime transactionTimeStamp, float value, PersonalAccount payer,
+			PersonalAccount payee) {
 		this.id = id;
 		this.transactionTimeStamp = transactionTimeStamp;
 		this.value = value;
@@ -52,19 +52,19 @@ public class Transaction {
 		this.value = value;
 	}
 
-	public PersonnalInfo getPayer() {
+	public PersonalAccount getPayer() {
 		return payer;
 	}
 
-	public void setPayer(PersonnalInfo payer) {
+	public void setPayer(PersonalAccount payer) {
 		this.payer = payer;
 	}
 
-	public PersonnalInfo getPayee() {
+	public PersonalAccount getPayee() {
 		return payee;
 	}
 
-	public void setPayee(PersonnalInfo payee) {
+	public void setPayee(PersonalAccount payee) {
 		this.payee = payee;
 	}
 }

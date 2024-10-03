@@ -1,4 +1,4 @@
-package lucas.banks_transfer_system.personnalKey;
+package lucas.banks_transfer_system.personalAccountInfo;
 
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
@@ -6,28 +6,28 @@ import jakarta.persistence.Entity;
 import lucas.banks_transfer_system.financialInstituition.*;
 
 @Entity
-public class RegisteredPersonnalKey {
+public class RegisteredPersonalKey {
 	
 	@EmbeddedId
-	private PersonnalKey personnalKey;
+	private PersonalKey personnalKey;
 	private FinancialInstituition financialInstituition;
 	private int bankAccount;
 	
-	public RegisteredPersonnalKey() {
+	public RegisteredPersonalKey() {
 	}
 	
-	public RegisteredPersonnalKey(PersonnalKey personnalKey, FinancialInstituition financialInstituition,
+	public RegisteredPersonalKey(PersonalKey personnalKey, FinancialInstituition financialInstituition,
 			int bankAccount) {
 		this.personnalKey = personnalKey;
-		//this.financialInstituition = financialInstituition;
+		this.financialInstituition = financialInstituition;
 		this.bankAccount = bankAccount;
 	}
 
-	public PersonnalKey getPersonnalKey() {
+	public PersonalKey getPersonnalKey() {
 		return personnalKey;
 	}
 
-	public void setPersonnalKey(PersonnalKey personnalKey) {
+	public void setPersonnalKey(PersonalKey personnalKey) {
 		this.personnalKey = personnalKey;
 	}
 
