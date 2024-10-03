@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: banks-transfer-system
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/banks_transfer_db
+    username: postgres
+    password: postgres
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true

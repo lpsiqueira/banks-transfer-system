@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>lucas</groupId>
-	<artifactId>banks-tranfer-system</artifactId>
+	<artifactId>banks-transfer-system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>banks-tranfer-system</name>
+	<name>banks-transfer-system</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
