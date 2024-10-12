@@ -10,14 +10,6 @@ import jakarta.persistence.SequenceGenerator;
 
 @Entity
 public class FinancialInstituition implements Serializable {
-	/* @SequenceGenerator(
-		name = "financial_instituition_id_sequence",
-		sequenceName = "financial_instituition_id_sequence"
-		)
-		@GeneratedValue(
-			strategy = GenerationType.SEQUENCE,
-			generator = "financial_instituition_id_sequence"
-			) */
 	@Id
 	private Integer numberId;
 	private String name;
