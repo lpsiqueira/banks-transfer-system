@@ -9,7 +9,7 @@ import lucas.banks_transfer_system.financialInstituition.*;
 public class RegisteredPersonalKey {
 	
 	@EmbeddedId
-	private PersonalKey personnalKey;
+	private PersonalKey personalKey;
 	private FinancialInstituition financialInstituition;
 	private int bankAccount;
 	
@@ -18,17 +18,17 @@ public class RegisteredPersonalKey {
 	
 	public RegisteredPersonalKey(PersonalKey personnalKey, FinancialInstituition financialInstituition,
 			int bankAccount) {
-		this.personnalKey = personnalKey;
+		this.personalKey = personnalKey;
 		this.financialInstituition = financialInstituition;
 		this.bankAccount = bankAccount;
 	}
 
-	public PersonalKey getPersonnalKey() {
-		return personnalKey;
+	public PersonalKey getPersonalKey() {
+		return personalKey;
 	}
 
-	public void setPersonnalKey(PersonalKey personnalKey) {
-		this.personnalKey = personnalKey;
+	public void setPersonalKey(PersonalKey personnalKey) {
+		this.personalKey = personnalKey;
 	}
 
 	public FinancialInstituition getFinancialInstituition() {
