@@ -45,17 +45,6 @@ public class PersonalKeyController {
 	}
 
 
-	@ExceptionHandler(TableConstraintException.class)
-	public ResponseEntity<String> handleExistingPersonalKey(TableConstraintException e) {
-		return ResponseEntity.status(400).body(e.getMessage());
-	}
-
-	@ExceptionHandler(EntityNotFoundException.class)
-	public ResponseEntity<String> handleEntityNotFound(EntityNotFoundException e) {
-		return ResponseEntity.status(400).body(e.getMessage());
-	}
-
-
 	public record RegisterPersonalKeyRequestBody (Integer bankId, PersonalKey personalKey, int bankAccount) {};
 
 	@PostMapping("")
