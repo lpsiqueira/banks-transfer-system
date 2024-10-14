@@ -6,18 +6,48 @@ public class PersonalAccount implements Serializable {
 	private String name;
 	private String cpf;
 	private int bank;
-	private int agencia;
 	private int account;
 	
 	public PersonalAccount() {
 	}
 
-	public PersonalAccount(String name, String cPF, int bank, int agencia, int account) {
+	public PersonalAccount(String name, String cpf, int bank, int account) {
 		this.name = name;
-		this.cpf = cPF;
+		this.cpf = cpf;
 		this.bank = bank;
-		this.agencia = agencia;
 		this.account = account;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public void setBank(int bank) {
+		this.bank = bank;
+	}
+
+	public void setAccount(int account) {
+		this.account = account;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public int getBank() {
+		return bank;
+	}
+
+	public int getAccount() {
+		return account;
 	}
 
 	@Override
@@ -27,7 +57,6 @@ public class PersonalAccount implements Serializable {
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
 		result = prime * result + bank;
-		result = prime * result + agencia;
 		result = prime * result + account;
 		return result;
 	}
@@ -52,8 +81,6 @@ public class PersonalAccount implements Serializable {
 		} else if (!cpf.equals(other.cpf))
 			return false;
 		if (bank != other.bank)
-			return false;
-		if (agencia != other.agencia)
 			return false;
 		if (account != other.account)
 			return false;
